@@ -24,18 +24,21 @@ const lookupWR = () => {
     // Validate pack choice
     if (!packs.includes(pack)) {
         alert('Pack is invalid.');
+        gettingWR = false;
         return;
     }
 
     // Validate level choice
     if (!Number.isInteger(level) || level < 1 || level > 8) {
         alert('Level is invalid.');
+        gettingWR = false;
         return;
     }
 
     // Validate bike choice
     if (!/[BCDEFGHI]/.test(bike)) {
         alert('Bike is invalid.');
+        gettingWR = false;
         return;
     }
 
