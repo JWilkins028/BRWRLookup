@@ -1,0 +1,66 @@
+:root {
+    --bg1: #ff6a00;
+    --bg2: #ff8a3d;
+    --bg3: rgba(50, 50, 50, 0.9);
+    --text: #0f1720;
+    --muted: #ffffffcc;
+
+    --bs-btn-hover-color: #0f1720;
+}
+
+* {
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 60%);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+.center-wrap {
+    padding: 28px;
+    background: var(--bg3);
+    border-radius: 14px;
+    box-shadow: 0 14px 40px var(--bg1);
+    color: var(--muted);
+}
+
+.form-select,
+.form-control {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    color: var(--muted) !important;
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: var(--bg1) !important;
+    box-shadow: 0 0 .25rem .25rem rgba(253, 145, 13, 0.25) !important;
+}
+
+.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffffca' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+.btn-lookup {
+    background: linear-gradient(90deg, #fff 0%, #ffd87a 100%);
+    color: var(--text);
+}
+
+.btn-github:hover,
+.btn-full-sheet:hover {
+    background: var(--bg3) !important;
+    color: var(--bg2) !important;
+}
+
+#result a {
+    color: var(--bg1);
+}
+
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 18px;
+    margin-top: auto;
+    font-size: 14px;
+}

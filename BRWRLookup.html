@@ -1,0 +1,118 @@
+<!-- ...existing code... -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>World Records Lookup — Bike Rush</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/2a85839126.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-end py-2">
+                <a class="btn btn-outline-light btn-github" href="https://github.com" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-3">
+        <div class="d-flex justify-content-center">
+            <div class="center-wrap">
+                <h1>World Records Lookup</h1>
+                <p class="form-text text-light mb-2">Select a level and a bike to see the current world record.</p>
+                <p class="form-text text-light">Click the world record to see the recording of the run.</p>
+
+                <hr>
+
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-8">
+                            <label class="form-label" for="pack">Level pack</label>
+                            <select class="form-select" id="pack" required>
+                                <option>Desert</option>
+                                <option>Arctic</option>
+                                <option>Dunes</option>
+                                <option>Hills</option>
+                                <option>Beach</option>
+                                <option>Savanna</option>
+                                <option>Desert 2</option>
+                                <option>Arctic 2</option>
+                                <option>Dunes 2</option>
+                                <option>Hills 2</option>
+                                <option>Beach 2</option>
+                                <option>Savanna 2</option>
+                                <option>Desert 3</option>
+                                <option>Arctic 3</option>
+                                <option>Holiday</option>
+                                <option>Holiday 2</option>
+                                <option>Special Tracks</option>
+                                <option>Halloween</option>
+                                <option>Thanksgiving</option>
+                                <option>Holiday 3</option>
+                                <option>Easter</option>
+                                <option>Holiday 4</option>
+                                <option>Bike Bowl</option>
+                                <option>4th of July</option>
+                                <option>Christmas</option>
+                                <option>Thanksgiving 2</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label class="form-label" for="level">Level&nbsp;#</label>
+                            <input class="form-control" id="level" type="number" min="1" max="8" required  value="1"/>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 col-sm-8">
+                            <label class="form-label" for="bike">Bike</label>
+                            <select class="form-select" id="bike" required>
+                                <option value="B">Normal</option>
+                                <option value="C">Acro</option>
+                                <option value="D">Ghost</option>
+                                <option value="E">Hog</option>
+                                <option value="F">Ultra</option>
+                                <option value="G">Acrohog</option>
+                                <option value="H">Agile Soul</option>
+                                <option value="I">Thunder Phantom</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between gap-2">
+                        <button type="button" class="btn btn-lookup" onclick="lookupWR();"><strong>Lookup</strong></button>
+                        <a class="btn btn-secondary btn-full-sheet" href="https://docs.google.com/spreadsheets/d/1NrWoAllaFGjTmZrjAeSereyXU5kgQHnm9T561hU3Qb4" target="_blank">
+                            Full WR Sheet
+                        </a>
+                    </div>
+
+                    <hr>
+
+                    <output id="result" for="pack level bike">&mdash;</output>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
