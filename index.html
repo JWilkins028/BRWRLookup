@@ -4,14 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>World Records Lookup — Bike Race</title>
+    <title>World Records Lookup &ndash; Bike Race</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400&display=swap"
         rel="stylesheet">
+    <!-- Custom styles -->
     <link rel="stylesheet" href="styles.css">
-
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/2a85839126.js" crossorigin="anonymous"></script>
 </head>
 
@@ -70,7 +73,7 @@
                         </div>
                         <div class="col-4">
                             <label class="form-label" for="level">Level&nbsp;#</label>
-                            <input class="form-control" id="level" type="number" min="1" max="8" required  value="1"/>
+                            <input class="form-control" id="level" type="number" min="1" max="8" required value="1" />
                         </div>
                     </div>
 
@@ -93,8 +96,11 @@
                     <hr>
 
                     <div class="d-flex justify-content-between gap-2">
-                        <button type="button" class="btn btn-lookup" onclick="lookupWR();"><strong>Lookup</strong></button>
-                        <a class="btn btn-secondary btn-full-sheet" href="https://docs.google.com/spreadsheets/d/1NrWoAllaFGjTmZrjAeSereyXU5kgQHnm9T561hU3Qb4" target="_blank">
+                        <button type="button" class="btn btn-lookup"
+                            onclick="lookupWR();"><strong>Lookup</strong></button>
+                        <a class="btn btn-secondary btn-full-sheet"
+                            href="https://docs.google.com/spreadsheets/d/1NrWoAllaFGjTmZrjAeSereyXU5kgQHnm9T561hU3Qb4"
+                            target="_blank">
                             Full WR Sheet
                         </a>
                     </div>
@@ -102,6 +108,9 @@
                     <hr>
 
                     <output id="result" for="pack level bike">&mdash;</output>
+                    <div id="videoContainer" class="mt-2">
+                        <span id="wrVideoMessage"></span>
+                    </div>
                 </form>
             </div>
         </div>
