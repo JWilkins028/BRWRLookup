@@ -27,31 +27,35 @@ const lookupWR = () => {
     const bike = document.getElementById('bike').value;
 
     document.getElementById('result').innerHTML = '&mdash;';
+    document.getElementById('wrVideo')?.remove();
 
     // Validate pack choice
     if (!packs.includes(pack)) {
-        alert('Pack is invalid.');
-        gettingWR = false;
+        alertAndReset('Pack is invalid.');
         return;
     }
 
     // Validate level choice
     if (!Number.isInteger(level) || level < 1 || level > 8) {
-        alert('Level is invalid.');
-        gettingWR = false;
+        alertAndReset('Level is invalid.');
         return;
     }
 
     // Validate bike choice
     if (!/[BCDEFGHI]/.test(bike)) {
-        alert('Bike is invalid.');
-        gettingWR = false;
+        alertAndReset('Bike is invalid.');
         return;
     }
 
     const cell = bike + (packs.indexOf(pack) * 8 + level + 1);
     fetchWR(cell);
     fetchWRLink(cell);
+}
+
+const alertAndReset = (msg) => {
+    alert(msg);
+    gettingWR = false;
+    gettingVideo = false;
 }
 
 const fetchWR = (cell) => {
