@@ -97,8 +97,12 @@ const fetchWRLink = (cell) => {
         })
         .then(data => {
             if (data.success) {
-                videoMessage.innerText = '';
-                document.getElementById('videoContainer').insertAdjacentHTML('beforeend', `<iframe id="wrVideo" class="w-100" src="${data.url.replace(/view.*$/i, 'preview')}"></iframe>`);
+                if (data.url) {
+                    videoMessage.innerText = '';
+                    document.getElementById('videoContainer').insertAdjacentHTML('beforeend', `<iframe id="wrVideo" class="w-100" src="${data.url.replace(/view.*$/i, 'preview')}"></iframe>`);
+                } else {
+                    videoMessage.innerText = 'There is no video available for this record.';
+                }
             } else {
                 console.error('Error fetching video link', data.error);
                 videoMessage.innerText = 'There was an error fetching the video. Please try again later.';
